@@ -15,7 +15,7 @@ This simple app has been developed using the following
 
 ### `TO DO `
 * Add favorites feature
-
+* Writing Tests (Jest)
 ##
 To run the project, in the project directory, you can run:
 
