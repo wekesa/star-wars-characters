@@ -16,16 +16,37 @@ This simple app has been developed using the following
 ### `TO DO `
 * Add favorites feature
 * Writing Tests (Jest)
-##
-To run the project, in the project directory, you can run:
+## Setup
+As mentioned earlier this app is built using the React  and it leverages on Axios Client.
+Below is a list of things you need to do to setup this project:
 
-### `npm start`
+### Step 1
+Ensure you have either `npm` or `yarn` installed.
+> To check whether you have `npm` or `yarn` installed you can run the command `npm -v` or `yarn -v`
+> to check whether you have them installed respectively.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Step 2
+You need to install all the project's dependencies locally, for this you should run
 
-The page will reload if you make edits.<br />
+```shell script
+yarn install # If you have yarn installed
 
+# or
 
+npm install # If you have npm installed
+``` 
 
+### Step 3
+Once you have completed all the steps above you are ready to run the application.
+You can use any of the commands below for that:
+
+```shell script
+yarn start 
+
+# or 
+
+npm start 
+```
+The application will run on this url 
+ * [http://localhost:3000](http://localhost:3000) 
 

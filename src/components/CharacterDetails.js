@@ -148,10 +148,10 @@ class CharacterDetails extends Component {
                                 <Divider my={6}/>
                                 <CardContent pb={1}>
                                     <Typography variant="h6" gutterBottom>
-                                        Characters Film
+                                        Character Films
                                     </Typography>
                                     <Typography variant="body2" gutterBottom>
-                                        A list of films the character has been part of.
+                                        A list of films this character has been part of.
                                     </Typography>
                                 </CardContent>
                                 {this.state.dataFetched && this.filmListTable()}
@@ -163,6 +163,5 @@ class CharacterDetails extends Component {
         )
     }
 }
-
 
 export default compose(withRouter)(CharacterDetails);
