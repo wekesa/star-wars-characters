@@ -1,30 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import StarWarsCharacters from './components/StarWarsCharacters';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Layout from './components/Layout'
 import CharacterDetails from './components/CharacterDetails'
+import CharacterList from './components/CharacterList'
 
-class App extends React.Component {
-    render() {
-        return (
-            <Router>
-                <Switch>
-                    <Route
-                        path={"/characters"}
-                        render={props => (
-                            <StarWarsCharacters {...props}/>
-                        )}
-                    />
-                    <Route path={"/characters-details"}
-                           component={CharacterDetails}
-                           render={props => (
-                               <CharacterDetails {...props} />
-                           )}
-                    />
-                </Switch>
-            </Router>
-        )
-    }
+function App() {
+  return (
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={CharacterList}/>
+          <Route exact path="/characters" component={CharacterList}/>
+          <Route exact path="/character-details/:id">
+              <CharacterDetails/>
+          </Route>
+        </Switch>
+      </Layout>
+      </Router>
+  );
 }
 
 ReactDOM.render(
