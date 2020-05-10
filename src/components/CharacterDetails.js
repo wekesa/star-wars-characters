@@ -148,7 +148,7 @@ class CharacterDetails extends Component {
                                 <Divider my={6}/>
                                 <CardContent pb={1}>
                                     <Typography variant="h6" gutterBottom>
-                                        Character Films
+                                        {characterDetails.name} Films
                                     </Typography>
                                     <Typography variant="body2" gutterBottom>
                                         A list of films this character has been part of.
