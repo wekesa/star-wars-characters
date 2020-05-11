@@ -31,7 +31,6 @@ class CharacterDetails extends Component {
             characterDetails: {},
             dataFetched: false,
             films: [],
-            filmsFetched: false
         }
     }
 

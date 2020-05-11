@@ -1,22 +1,13 @@
 import React, {Component, forwardRef} from 'react'
 import MaterialTable from "material-table";
+import {
+    AddBox, ArrowDownward, Check,
+    ChevronLeft, ChevronRight,
+    Clear, DeleteOutline, Edit,
+    FilterList, FirstPage, LastPage,
+    Remove, SaveAlt, Search, ViewColumn, ViewCarousel
+} from "@material-ui/icons";
 
-import AddBox from '@material-ui/icons/AddBox';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
-import Check from '@material-ui/icons/Check';
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
-import ChevronRight from '@material-ui/icons/ChevronRight';
-import Clear from '@material-ui/icons/Clear';
-import DeleteOutline from '@material-ui/icons/DeleteOutline';
-import Edit from '@material-ui/icons/Edit';
-import FilterList from '@material-ui/icons/FilterList';
-import FirstPage from '@material-ui/icons/FirstPage';
-import LastPage from '@material-ui/icons/LastPage';
-import Remove from '@material-ui/icons/Remove';
-import SaveAlt from '@material-ui/icons/SaveAlt';
-import Search from '@material-ui/icons/Search';
-import ViewColumn from '@material-ui/icons/ViewColumn';
-import ViewDetailsIcon from '@material-ui/icons/ViewCarousel';
 import {Redirect, withRouter} from 'react-router-dom';
 import { compose } from 'recompose'
 
@@ -86,15 +77,13 @@ class CharacterList extends Component {
                         {title: "Name", field: "name"},
                         {title: "Eye Color", field: "eye_color"},
                         {title: "Gender", field: "gender"},
-                        {
-                            title: "Birth year", field: "birth_year",
-                        }
+                        {title: "Birth year", field: "birth_year",}
                     ]}
                     data={this.state.characters}
                     title="StarWars Characters from SWAPI API"
                     actions={[
                         {
-                            icon: ViewDetailsIcon,
+                            icon: ViewCarousel,
                             tooltip: 'View Details',
                             onClick: (event, rowData) => this.setState({
                                     navigate: true,
