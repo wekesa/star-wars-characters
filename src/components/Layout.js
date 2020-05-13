@@ -1,9 +1,7 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-import { CssBaseline, Paper as MuiPaper, } from "@material-ui/core";
-
-import { spacing } from "@material-ui/system";
+import { Paper } from "@material-ui/core";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -14,22 +12,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Paper = styled(MuiPaper)(spacing);
-
-const MainContent = styled(Paper)`
-  flex: 1;
-  .MuiPaper-root {
-    box-shadow: none;
-  }
-`;
-
 function Layout({ children }) {
   return (
-    <MainContent>
-      <CssBaseline />
+    <Paper>
       <GlobalStyle />
       {children}
-    </MainContent>
+    </Paper>
   );
 }
 
