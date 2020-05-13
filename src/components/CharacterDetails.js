@@ -50,9 +50,9 @@ class CharacterDetails extends Component {
         const films = await this.getFilmDetails(characterDetails.films);
 
         this.setState({
-            characterDetails,
+            characterDetails: characterDetails,
             dataFetched: true,
-            films,
+            films:films,
         })
 
     }
@@ -93,7 +93,7 @@ class CharacterDetails extends Component {
                 </TableHead>
                 <TableBody>
                     {this.state.films.map(row => (
-                        <TableRow key={row.id}>
+                        <TableRow key={row.title}>
                             <TableCell align="left">{row.title}</TableCell>
                             <TableCell>{row.episode_id}</TableCell>
                             <TableCell>{row.opening_crawl}</TableCell>
